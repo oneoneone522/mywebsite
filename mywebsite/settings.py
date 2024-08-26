@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # DEBUG = os.getenv('DEBUG') == 'True'
-ALLOWED_HOSTS = ['mywebsite-pl96.onrender.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['mywebsite-pl96.onrender.com','127.0.0.1']
 
 
 # Application definition
