@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import ClientInfo
 
-# Register your models here.
+@admin.register(ClientInfo)
+class ClientInfoadmin(admin.ModelAdmin):
+    list_display = ('name', 'email_add', 'contact_choice')

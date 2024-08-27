@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% block title %}
+網站架設詢價單填寫
+{% endblock %}
+
+{% block content %}
+<div class="container" style="justify-content: center; padding-top: 20px;">
+    <form method="POST" action="{% url 'core:submit_quotation' %}">
+        {% csrf_token %}
+        <label for="contact_choice"><strong>得到預估報價後需要聯絡您嗎? *</strong></label><br>
+        <label for="contact_choice">您的資料會被我們儲存，若您選擇"不了"，我們不會打給您，您的資料也會被刪除，請您放心。</label> <br>
+        {{ form.contact_choice }} <br>
+    
+        <label for="name"><strong>姓名 *</strong></label><br>
+        {{ form.name }} <br>
+    
+        <label for="phone_num"><strong>電話 *</strong></label><br>
+        {{ form.phone_num }}<br>
+    
+        <label for="Line_ID"><strong>LINE ID *</strong></label><br>
+        {{ form.Line_ID }}<br>
+    
+        <label for="email_add"><strong>Email *</strong></label><br>
+        {{ form.email_add }}<br>
+    
+        <label for="industry"><strong>產業類型</strong></label><br>
+        {{ form.industry }} <br>
+    
+        <label for="web_type"><strong>欲架設網站類型 *</strong></label><br>
+        {{ form.web_type }} <br>
+        <button type="submit" class="btn">送出詢價單</button>
+    </form>
+    
+</div>
+
+{% endblock %}

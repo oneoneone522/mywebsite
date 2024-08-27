@@ -4,14 +4,80 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-6">
-        <div class="btn-close-white">點我填寫詢價單</div>
+<div class="container">
+    <div class="row" style="height: 100vh;">
+        <div class="col-6" style="padding-top: 100px;">
+            <h2><strong>品牌規劃、網頁、平面設計、後續行銷，我們為您提供整合式的服務！</strong></h2> <br>
+            <p>JL 工作室可以根據您的需求，建立最適合您產業類型的網站，提供您專業的建議和方案。 <br>此外，我們也強調價格的透明，力求使您能夠以最合理的預算達到最佳的成效！</p>
+            <a href="{% url 'core:quotation' %}" class="btn btn-success btn-lg rounded-pill shadow" style="justify-content: baseline;">
+                <strong>點我填寫網站建設詢價單</strong>
+            </a>        
+        </div>
+        <div class="col-6">
+            <img src="..." alt="">
+        </div>   
     </div>
-    <div class="col-6">
-        <img src="..." alt="">
+    <div class="row">
+        <h1 style="text-align: center; padding-bottom: 40px;"><strong>網站架設方案介紹</strong></h1>
     </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12" style="padding-bottom: 20px;">
+            <div style="text-align: left;justify-content: center;">
+                <h3><strong>一頁式網站</strong></h3>
+                <p>一頁式的網站</p>
+                <p>套板價格 NT$
+                    <strong>
+                        <span style="font-size: 40px;">20,000<br></span>
+                    </strong>
+                    客製化 NT$30,000起
+                </p>
+                <h4><strong>服務範疇：</strong></h4>
+                <ul>
+                    <li>基本SEO設定</li>
+                    <li>響應式設計</li>
+                    <li>一個頁面</li>
+                    <li>後臺管理（圖文修改）</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12" style="padding-bottom: 20px;">
+            <div style="text-align: left;justify-content: center;">
+                <h3><strong>套版形象網站</strong></h3>
+                <p>包含４個頁面的形象網站</p>
+                <p>套板價格 NT$
+                    <strong>
+                        <span style="font-size: 40px;">25,000<br></span>
+                    </strong>
+                </p>
+                <h4><strong>服務範疇：</strong></h4>
+                <ul>
+                    <li>基本SEO設定</li>
+                    <li>響應式設計</li>
+                    <li>四頁（首頁｜關於｜聯絡｜服務）</li>
+                    <li>後臺管理（圖文修改）</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12" style="padding-bottom: 20px;">
+            <div style="text-align: left;justify-content: center;">
+                <h3><strong>半套版形象網站</strong></h3>
+                <p>包含４個頁面的形象網站</p>
+                <p>套板價格 NT$
+                    <strong>
+                        <span style="font-size: 40px;">30,000</span>
+                    </strong>起
+                </p>
+                <h4><strong>服務範疇：</strong></h4>
+                <ul>
+                    <li>基本SEO設定</li>
+                    <li>響應式設計</li>
+                    <li>四頁（首頁｜關於｜聯絡｜服務）</li>
+                    <li>後臺管理（圖文修改）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 </div>
-        
 {% endblock %}
 
