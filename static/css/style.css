@@ -40,3 +40,8 @@ background-color: #000; /* Change this to any color you prefer */
     background-color: blue;
     color: white;
 }
+.custom-border-container {
+    border: 5px solid black;
+    text-align: left;
+    justify-content: center;
+}

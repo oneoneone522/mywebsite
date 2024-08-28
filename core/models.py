@@ -12,13 +12,15 @@ class ClientInfo(models.Model):
     ]
     WEB_TYPE_CHOICES = [
         ('single_page', '一頁式網站'),
-        ('corporate', '形象網站'),
+        ('template_corporate', '套版形象網站'),
+        ('half_template_corporate', '半套版形象網站'),
     ]
     
     contact_choice = models.CharField(max_length=20, choices=CONTACT_CHOICES,  default='no_contact', blank=False)
-    web_type = models.CharField(max_length=20, choices=WEB_TYPE_CHOICES, blank=True)
+    web_type = models.CharField(max_length=50, choices=WEB_TYPE_CHOICES, blank=True)
     name = models.CharField(max_length=50, blank=False)
     phone_num = models.CharField(max_length=10, blank=False)
     Line_ID = models.CharField(max_length=50, blank=False)
     email_add = models.EmailField(max_length=254, unique=True, blank=False)
     industry = models.CharField(max_length=100, blank=True)
+    ps = models.TextField(max_length=500, blank=True)
