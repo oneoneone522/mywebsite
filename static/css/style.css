@@ -1,0 +1,47 @@
+body {
+    padding-top: 90px; 
+    }
+    
+.offcanvas {
+background-color: #000; /* Change this to any color you prefer */
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px; /* 小屏幕设备的导航栏高度 */
+    }
+    .nav-item.dropdown {
+        display: none;
+    }
+
+    .offcanvas-body ul.nav-item.d-lg-none ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+    .nav-item.dropdown {
+    display: none;
+    }
+
+    .offcanvas-body ul.nav-item.d-lg-none ul {
+    list-style: none;
+    padding-left: 20px;
+    }
+}
+/* 在大屏幕上隱藏直接展開的選單 */
+@media (min-width: 992px) {
+    .nav-item.d-lg-none {
+    display: none;
+    }
+}
+.btn.btn-outline-success {
+    color: blue;
+    border-color: blue;
+}
+.btn.btn-outline-success:hover {
+    background-color: blue;
+    color: white;
+}
+.custom-border-container {
+    border: 5px solid black;
+    text-align: left;
+    justify-content: center;
+}

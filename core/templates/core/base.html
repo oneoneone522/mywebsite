@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JL 網站架設｜{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="border:  1px solid #000;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><strong>JL Studio</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">首頁</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      網站架設介紹
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">一頁式網站</a></li>
+                      <li><a class="dropdown-item" href="#">形象網站</a></li>
+                    </ul>
+                  </li>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{% url 'core:contact' %}">聯繫我們</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>      
+    </header>
+    <div class="container-fluid">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <div class="container-fluid bg-dark text-white">
+        <div class="row">
+            <div class="col my-5">
+                <p><strong>電話：</strong>09-68380030</p>
+                <a href="mailto:jj0985788718@gmail.com" style="text-decoration: none; color: white;"><strong>電子郵件：</strong>jj0985788718@gmail.com</a>
+            </div>
+        </div>
+        <div class="row" style="display: flex;">
+          <p>Copyright&copy;2024 JL Studio All Rights Reserved</p>
+          <p text-white>
+              Designed and created by JL studio
+          </p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
