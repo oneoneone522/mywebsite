@@ -5,19 +5,28 @@
 {% load static %}
 {% block content %}
 <div class="container-fluid">
-    <div class="row" style="height: 100vh;">
-        <div class="col-6" style="padding-top: 100px;">
-            <h2><strong>品牌規劃、網頁、平面設計、後續行銷，我們為您提供整合式的服務！</strong></h2> <br>
-            <p>JL 工作室可以根據您的需求，建立最適合您產業類型的網站，提供您專業的建議和方案。 <br>此外，我們也強調價格的透明，力求使您能夠以最合理的預算達到最佳的成效！</p>
-            <a href="{% url 'core:quotation' %}" class="btn btn-success btn-lg rounded-pill shadow" style="justify-content: baseline;">
-                <strong>點我填寫網站架設詢價單</strong>
-            </a>        
+    <div class="row" style="min-height: 100vh;">
+        <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center" style="padding-top: 100px;">
+            <h2 class="text-center text-lg-start">
+                <strong>品牌規劃、網頁、平面設計、後續行銷，我們為您提供整合式的服務！</strong>
+            </h2> 
+            <br>
+            <p class="text-center text-lg-start">
+                JL 工作室可以根據您的需求，建立最適合您產業類型的網站，提供您專業的建議和方案。 
+                <br>
+                此外，我們也強調價格的透明，力求使您能夠以最合理的預算達到最佳的成效！
+            </p>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+                <a href="{% url 'core:quotation' %}" class="btn btn-success btn-lg rounded-pill shadow">
+                    <strong>點我填寫網站架設詢價單</strong>
+                </a>
+            </div>
         </div>
-        <div class="col-6">
-            <img src="..." alt="JL 工作室的專業品牌規劃與網站設計服務">
+        <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
+            <img src="..." alt="JL 工作室的專業品牌規劃與網站設計服務" class="img-fluid">
         </div>   
-    </div>
-    <div class="row">
+    </div>    
+    <div class="row mt-5" id="services">
         <h1 style="text-align: center; padding-bottom: 40px;"><strong>網站架設方案介紹</strong></h1>
     </div>
     <div class="row">
@@ -78,7 +87,8 @@
         </div>
     </div>
     <div class="row">
-        <p style="text-align: center;">上述價格僅包含網站建置與設計費用（買斷），尚未包含主機、資料庫和網域費用 <a href="#" style="font-size: 12px;color: black;">我想為我的品牌建立網站，需要多少成本?</a></p>
+        <p style="text-align: center;">上述價格僅包含網站建置與設計費用（買斷），尚未包含主機、資料庫和網域費用 </p>
+        <!-- <a href="#" style="font-size: 12px;color: black;">我想為我的品牌建立網站，需要多少成本?</a> -->
     </div>
     <div class="row">
         <h1 class="text-center py-4"><strong>網站架設服務流程</strong></h1>
