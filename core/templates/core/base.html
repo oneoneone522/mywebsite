@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JL Studio 提供專業的品牌規劃、網站設計及後續行銷整合服務，為您量身打造最合適的網站解決方案。">
     <title>JL 網站架設｜{% block title %}{% endblock %}</title>
     {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+      @media (max-width: 768px) {
+          body {
+              padding-top: 56px; /* 小屏幕设备的导航栏高度 */
+          }
+          .nav-item.dropdown {
+            display: none;
+          }
+
+          .offcanvas-body ul.nav-item.d-lg-none ul {
+            list-style: none;
+            padding-left: 20px;
+          }
+          .nav-item.dropdown {
+          display: none;
+        }
+
+        .offcanvas-body ul.nav-item.d-lg-none ul {
+          list-style: none;
+          padding-left: 20px;
+        }
+      }
+      .row-no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .icon-container {
+      text-align: center;
+      }
+
+
+      /* 在大屏幕上隱藏直接展開的選單 */
+      @media (min-width: 992px) {
+        .nav-item.d-lg-none {
+          display: none;
+        }
+      }
+    </style>
 </head>
 <body>
     <header>
@@ -23,9 +63,12 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="/">首頁</a>
+                  <a class="nav-link" aria-current="page" href="/"><strong>首頁</strong></a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/"><strong>架站介紹</strong></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       網站架設介紹
                     </a>
@@ -33,10 +76,16 @@
                       <li><a class="dropdown-item" href="#">一頁式網站</a></li>
                       <li><a class="dropdown-item" href="#">形象網站</a></li>
                     </ul>
-                  </li>
-                </li> 
+                </li> -->
+                <!-- <li class="nav-item d-lg-none">
+                  <p class="text-white">瀏覽商品</p>
+                  <ul>
+                    <li><a href="#">一頁式網站</a></li>
+                    <li><a href="#">形象網站</a></li>
+                  </ul>
+                </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{% url 'core:contact' %}">聯繫我們</a>
+                  <a class="nav-link" aria-current="page" href="{% url 'core:contact' %}"><strong>聯繫我們</strong></a>
                 </li>
               </ul>
             </div>
@@ -49,20 +98,27 @@
         {% endblock %}
     </div>
     
-    <div class="container-fluid bg-dark text-white">
+    <footer class="container-fluid" style="border: solid 1px;">
         <div class="row">
-            <div class="col my-5">
-                <p><strong>電話：</strong>09-68380030</p>
-                <a href="mailto:jj0985788718@gmail.com" style="text-decoration: none; color: white;"><strong>電子郵件：</strong>jj0985788718@gmail.com</a>
+            <div class="col-12 col-sm-6 col-md-3 my-5" style="text-align: center;">
+                <p style="text-decoration: underline;"><strong>Contact Us</strong></p>
+                <p><strong>電話：</strong>(09)68380030</p>
+                <a href="mailto:jj0985788718@gmail.com" style="text-decoration: none; color: #000;;"><strong>電子郵件：</strong>jj0985788718@gmail.com</a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 my-5" style="text-align: center;">
+              <p style="text-decoration: underline;"><strong>Menu</strong></p>
+              
             </div>
         </div>
-        <div class="row" style="display: flex;">
-          <p>Copyright&copy;2024 JL Studio All Rights Reserved</p>
-          <p text-white>
-              Designed and created by JL studio
-          </p>
+        <div class="row">
+            <div class="col text-center">
+                <p>Copyright&copy;2024 JL Studio All Rights Reserved</p>
+                <p>
+                    Designed and created by JL studio
+                </p>
+            </div>
         </div>
-    </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

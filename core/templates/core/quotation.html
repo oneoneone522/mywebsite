@@ -2,7 +2,7 @@
 {% block title %}
 網站架設詢價單填寫
 {% endblock %}
-
+{% load static %}
 {% block content %}
 <div class="container" style="justify-content: center; padding-top: 20px;">
     <form method="POST" action="{% url 'core:submit_quotation' %}">

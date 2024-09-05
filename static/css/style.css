@@ -1,9 +1,10 @@
-body {
-    padding-top: 90px; 
-    }
-    
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+    body {
+    padding-top: 75px;
+    font-family: 'Noto Sans TC', sans-serif;
+    }    
 .offcanvas {
-background-color: #000; /* Change this to any color you prefer */
+    background-color: #ffff; /* Change this to any color you prefer */
 }
 @media (max-width: 768px) {
     body {

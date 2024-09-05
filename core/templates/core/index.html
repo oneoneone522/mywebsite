@@ -1,20 +1,20 @@
 {% extends 'core/base.html' %}
 {% block title %}
-首頁
+專業品牌規劃與網站設計 - JL 工作室
 {% endblock %}
-
+{% load static %}
 {% block content %}
-<div class="container">
+<div class="container-fluid">
     <div class="row" style="height: 100vh;">
         <div class="col-6" style="padding-top: 100px;">
             <h2><strong>品牌規劃、網頁、平面設計、後續行銷，我們為您提供整合式的服務！</strong></h2> <br>
             <p>JL 工作室可以根據您的需求，建立最適合您產業類型的網站，提供您專業的建議和方案。 <br>此外，我們也強調價格的透明，力求使您能夠以最合理的預算達到最佳的成效！</p>
             <a href="{% url 'core:quotation' %}" class="btn btn-success btn-lg rounded-pill shadow" style="justify-content: baseline;">
-                <strong>點我填寫網站建設詢價單</strong>
+                <strong>點我填寫網站架設詢價單</strong>
             </a>        
         </div>
         <div class="col-6">
-            <img src="..." alt="">
+            <img src="..." alt="JL 工作室的專業品牌規劃與網站設計服務">
         </div>   
     </div>
     <div class="row">
@@ -25,7 +25,7 @@
             <div class="container" style="height: 400px; text-align: left; justify-content: center; border: 5px solid black; border-radius: 50px; padding-top: 20px; padding-left: 20px;">
                 <h3><strong>一頁式網站</strong></h3>
                 <p>一頁式的網站</p>
-                <p>套板價格 NT$
+                <p>套版價格 NT$
                     <strong>
                         <span style="font-size: 40px;">20,000<br></span>
                     </strong>
@@ -38,14 +38,13 @@
                     <li>一個頁面</li>
                     <li>後臺管理（圖文修改）</li>
                 </ul>
-            </div>
-                      
+            </div>    
         </div>
         <div class="col-lg-4 col-md-6 col-12" style="padding-bottom: 20px;">
             <div class="container" style="height: 400px; text-align: left; justify-content: center; border: 5px solid black; border-radius: 50px; padding-top: 20px; padding-left: 20px;">
                 <h3><strong>套版形象網站</strong></h3>
-                <p>包含４個頁面的形象網站</p>
-                <p>套板價格 NT$
+                <p>包含４個頁面的形象網站，使用JL studio建立的網站套版，提供自行更換網站圖文、LOGO的後臺管理功能</p>
+                <p>套版價格 NT$
                     <strong>
                         <span style="font-size: 40px;">25,000<br></span>
                     </strong>
@@ -62,8 +61,8 @@
         <div class="col-lg-4 col-md-6 col-12" style="padding-bottom: 20px;">
             <div class="container" style="height: 400px; text-align: left; justify-content: center; border: 5px solid black; border-radius: 50px; padding-top: 20px; padding-left: 20px;">
                 <h3><strong>半套版形象網站</strong></h3>
-                <p>包含４個頁面的形象網站</p>
-                <p>套板價格 NT$
+                <p>可客製化的形象網站，除了設計可客製化，</p>
+                <p>價格 NT$
                     <strong>
                         <span style="font-size: 40px;">30,000</span>
                     </strong>起
@@ -78,7 +77,62 @@
             </div>
         </div>
     </div>
-    
+    <div class="row">
+        <p style="text-align: center;">上述價格僅包含網站建置與設計費用（買斷），尚未包含主機、資料庫和網域費用 <a href="#" style="font-size: 12px;color: black;">我想為我的品牌建立網站，需要多少成本?</a></p>
+    </div>
+    <div class="row">
+        <h1 class="text-center py-4"><strong>網站架設服務流程</strong></h1>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="icon-container text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001"/>
+                </svg>
+            </div>
+            <div class="text-center py-3">
+                <h2><strong>網站設計商討</strong></h2>
+                <p><strong>確認網站風格、版面及設計</strong></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="icon-container text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-coin" viewBox="0 0 16 16">
+                    <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                  </svg>
+            </div>
+            <div class="text-center py-3">
+                <h2><strong>網站方案報價</strong></h2>
+                <p><strong>確認網站風格、版面及設計</strong></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="icon-container text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 16 16">
+                    <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+                </svg>
+            </div>
+            <div class="text-center py-3">
+                <h2><strong>網站架設作業</strong></h2>
+                <p><strong>確認網站風格、版面及設計</strong></p>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="icon-container text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                </svg>
+            </div>
+            <div class="text-center py-3">
+                <h2><strong>網站交付</strong></h2>
+                <p><strong>網站交付及使用說明</strong></p>
+            </div>
+        </div>
+    </div>
+        
 </div>
-{% endblock %}
 
+{% endblock %}
